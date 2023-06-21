@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.12'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group 'com.bulavkov.categorizer'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    implementation 'org.jsoup:jsoup:1.16.1'
+    implementation 'org.ahocorasick:ahocorasick:0.6.3'
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    implementation group: 'net.bytebuddy', name: 'byte-buddy', version: '1.14.5'
+
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.7.0'
+    testImplementation group: 'org.mockito', name: 'mockito-inline', version: '4.7.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}

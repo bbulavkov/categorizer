@@ -1,0 +1,19 @@
+application-configuration:
+  #  values taken from task description
+  categoryKeywords:
+    '[Star Wars]':
+      - starwar
+      - star war
+      - starwars
+      - star wars
+      - r2d2
+      - may the force be with you
+    '[Basketball]':
+      - basketball
+      - nba
+      - ncaa
+      - lebron james
+      - john stokton
+      - anthony davis
+
+
